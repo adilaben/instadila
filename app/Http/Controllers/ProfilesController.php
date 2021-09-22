@@ -79,5 +79,11 @@ class ProfilesController extends Controller
         return redirect("/profile/{$user->id}");
     }
 
-   
+    public  function searchUsers(Request $request){
+        $keyword=$request->input('search');
+
+        $users=User::search($keyword)->get() ;
+        return view('profiles/list', compact('users','keyword'));
+
+    }
 }

@@ -75,4 +75,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class);
     }
+
+    public function scopeSearch($query,$keyword){
+        return $query->where('name','like','%' .$keyword.'%')
+        ->orWhere('username','like','%' .$keyword.'%');
+    }
 }
