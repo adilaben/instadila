@@ -19,6 +19,7 @@
                         <span class="pl-1">&diams;</span>
                         <a href="" class="pl-2">Follow</a>
 
+
                     </div>
                 </div>
             </div>

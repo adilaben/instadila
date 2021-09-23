@@ -82,7 +82,7 @@ class ProfilesController extends Controller
     public  function searchUsers(Request $request){
         $keyword=$request->input('search');
 
-        $users=User::search($keyword)->get() ;
+        $users=User::search($keyword)->get();
         return view('profiles/list', compact('users','keyword'));
 
     }

@@ -24,7 +24,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container justify-content-between">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="pl-3">INSTADILA</div>
                 </a>
@@ -34,9 +34,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
-                <form class="form-inline my-2 my-lg-0" action="{{route('profile.list')}}" method="get" role="search">
+                <form class="form-inline " style="  width: 100%; display: flex;justify-content: center;" action="{{route('profile.list')}}" method="get" role="search">
                     @csrf
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"  value="{{ isset($search) ? $search : '' }}">
+                    <input class="form-control mr-sm-2"  style=" width: 50%;" type="search"id="search" name="search" placeholder="Looking for a user ?" aria-label="Search"  value="{{ isset($search) ? $search : '' }}">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
                 </form>
     
